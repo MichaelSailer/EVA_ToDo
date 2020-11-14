@@ -1,0 +1,17 @@
+//Erster Befehl
+
+git add Todo/
+
+//Hier wird der ganze Ordner für den Upload hinzugefügt. Man sollte bevor man Enter drückt Tab drücken, um 
+//die korrekte schreibweise aufzurufen.
+
+//Zweiter Befehl
+
+git commit -m "Message was sich geändert hat"
+
+//Dritter Befehl
+
+git push
+
+
+//Dann sollte alles heruntergeladen werden und dann passt alles.

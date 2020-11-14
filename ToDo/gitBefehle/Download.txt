@@ -1,0 +1,3 @@
+//Einziger Befehl
+
+git pull

@@ -45,7 +45,7 @@ let userJSON = {
 // Neuen User einfügen: 
 // wird bei Regristrien von neuen User aufgerufen nur mit richtigen JSON Daten
 // Funktion newUser (vorname, nachname, email);
-//      userdb.push(userJSON);
+    userdb.push(userJSON);
 
 // alle  User auslesen:
 
