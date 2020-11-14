@@ -20,4 +20,4 @@ git commit -m "Message was sich geändert hat"
 git push
 
 
-//Dann sollte alles heruntergeladen werden und dann passt alles.
+//Dann sollte alles hochgeladen werden und dann passt alles.
