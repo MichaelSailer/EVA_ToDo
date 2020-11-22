@@ -1,0 +1,8 @@
+//Zuerst sollte man immer den Befehl ausführen.
+git status 
+
+//Dann kann man downloaden
+
+//Einziger Befehl
+
+git pull
