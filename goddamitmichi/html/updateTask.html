@@ -13,14 +13,14 @@
   <title>Todo Liste</title>
 </head>
 
-<body>
-  <h1>Add new Task</h1>
+<body onload="loadData()">
+  <h1 class="text-white">Update Task</h1>
   <div class="row h-100">
     <div class="col-sm-3"></div>
     <div class="inputField col-sm-6 my-auto">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">New Task Name</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Task Name</span>
         </div>
         <input type="text" id="taskTitle" class="form-control" aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-sm">
@@ -36,15 +36,18 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">Until</span>
         </div>
-        <input type="date" id="until" class="form-control" aria-label="Sizing example input"
+        <input type="date" class="form-control" id="until" aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-sm">
-      </div>
-      <div class="buttonReihe col-sm-12 my-auto">
-        <button class="btn btn-success" onclick="saveTask()">Save new Task</button>
-        <button class="btn btn-warning" onclick="goBack()">Homepage</button>
       </div>
     </div>
   </div>
+  
+    <div class="buttonReihe col-sm-12 my-auto">
+      <button class="btn btn-success" onclick="updateTask()">Update Task</button>
+      <button class="btn btn-primary" onclick="deleteTaskFromUI()">Erledigt</button>
+      <button class="btn btn-warning" onclick="goBack()">Homepage</button>
+    </div>
+ 
 
 
   <script src="../js/controller.js"></script>
