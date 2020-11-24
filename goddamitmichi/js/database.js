@@ -67,24 +67,24 @@ let keysFromUsers = [];
 
 function keyForLogin(email,password){
     let keys = [];
-    let loginErfolgreich = false
+    let loginErfolgreich = false;
     userdb.on('value', (snap) => {
         keys = Object.keys(snap.val());
-    })
+    });
 
     keys.forEach((val) => {
         if(checkUserforLogin(val,email,password)){
             localStorage.setItem("schlüssel", val);
-            loginErfolgreich = true
-            taskdb = userdb.child(val)
+            loginErfolgreich = true;
+            taskdb = userdb.child(val);
         }
-    })
+    });
     return loginErfolgreich;
 }
 
 function checkUserforLogin(key,email,password){
-    let value
-    let erfolgreich = false
+    let value;
+    let erfolgreich = false;
     userdb.child(key).on('value',snap=>{
         value = snap.val();
         
@@ -101,7 +101,7 @@ function keyForRegister(user){
     let schlüssel = null;
     userdb.on('value', (snap) => {
         keys = Object.keys(snap.val());
-    })
+    });
 
     keys.forEach((val) => {
         schlüssel =  checkUserforRegister(val,user)
@@ -195,3 +195,22 @@ function getTaskByKey(key){
         document.getElementById("until").value = item.until
     });
 }
+
+//Update
+taskdb.on('child_changed',snap=>{
+   let item = snap.val();
+   updateTask(snap.key, item);
+});
+
+function updateTask(id, data){
+   let taskdb = userdb.child(localStorage.getItem("updateItem"));
+   let taskTitle=document.getElementById("taskTitle").value;
+   let taskDescription=document.getElementById("taskDescription").value;
+    let until=document.getElementById("until").value;
+    let task={taskTitle:taskTitle, taskDescription:taskDescription, until:until};
+   
+   
+}
+
+
+
