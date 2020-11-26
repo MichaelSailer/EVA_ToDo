@@ -1,0 +1,14 @@
+button{
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+body{
+    background-color: rgb(88, 111, 124);
+}
+
+.buttonReihe{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
